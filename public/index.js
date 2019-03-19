@@ -28,7 +28,7 @@ submitButton.addEventListener("click", (e) => {
     const winSize = getWindowSize()
     const orientation = winSize.height > winSize.width ? "portrait" : "landscape"
     if (inputText.value) {
-        fetch(`http://localhost:3500/weather?address=${inputText.value}&w=${winSize.width}&h=${winSize.height}&orientation=${orientation}`).then((response) => {
+        fetch(`/weather?address=${inputText.value}&w=${winSize.width}&h=${winSize.height}&orientation=${orientation}`).then((response) => {
             response.json().then((data) => {
                 console.log(data)
                 bodyStyle.backgroundImage = `url("${data.img.imgURL}")`
