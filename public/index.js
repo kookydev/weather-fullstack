@@ -1,6 +1,9 @@
 console.log("client javascript initiated")
 const inputText = document.getElementById("input-text")
 const submitButton = document.getElementById("submit-button")
+let bodyStyle = document.body.style
+
+
 
 const getWindowSize = () => {
     const doc = document,
@@ -11,11 +14,7 @@ const getWindowSize = () => {
     const width = docEl.clientWidth;
     const height = docEl.clientHeight;
 
-    // mobile zoomed in?
-    if (w.innerWidth && width > w.innerWidth) {
-        width = w.innerWidth;
-        height = w.innerHeight;
-    }
+
 
     return {
         width: width,
@@ -32,6 +31,7 @@ submitButton.addEventListener("click", (e) => {
         fetch(`http://localhost:3500/weather?address=${inputText.value}&w=${winSize.width}&h=${winSize.height}&orientation=${orientation}`).then((response) => {
             response.json().then((data) => {
                 console.log(data)
+                bodyStyle.backgroundImage = `url("${data.img.imgURL}")`
             })
         })
 
