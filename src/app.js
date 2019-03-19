@@ -4,6 +4,7 @@ const geocode = require("./geocode")
 const forecast = require("./forecast")
 const backgroundImg = require("./backgroundImg")
 const app = express()
+const port = process.env.PORT || 3000
 const publicDirectory = path.join(__dirname, "../public")
 app.use(express.static(publicDirectory))
 
@@ -46,6 +47,6 @@ app.get("/weather", (req, res) => {
 
 
 
-app.listen(3500, () => {
-    console.log("listening on port 3500")
+app.listen(port, () => {
+    console.log(`listening on port ${port}`)
 })
