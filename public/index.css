@@ -2,34 +2,37 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 
 body {
-  height: 100vh;
-  width: 100vw;
-  margin: 0px;
-  padding: 0px;
-  overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
 
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Top_of_Atmosphere.jpg/1920px-Top_of_Atmosphere.jpg");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Top_of_Atmosphere.jpg/1920px-Top_of_Atmosphere.jpg");
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 .parent-container {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 1fr max-content 1fr;
-  grid-template-rows: 1fr min-content 1fr;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 1fr min-content 1fr;
 }
 
 .attribution {
-  color: rgb(233, 233, 233);
-  font-family: "Lato", sans-serif;
-  grid-area: 3 / 1 / span 1 / span 3;
-  align-self: flex-end;
-  text-align: center;
-  text-shadow: 1px 1px 5px black;
+    color: rgb(233, 233, 233);
+    font-family: "Lato", sans-serif;
+    grid-area: 3 / 1 / span 1 / span 3;
+    align-self: flex-end;
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
 }
-clear-day,
+
+/* clear-day,
 clear-night,
 rain,
 snow,
@@ -38,183 +41,216 @@ wind,
 fog,
 cloudy,
 partly-cloudy-day,
-or partly-cloudy-night .attribution a {
-  color: rgb(233, 233, 233);
+or partly-cloudy-night */
+.attribution a {
+    color: rgb(233, 233, 233);
 }
 
 .search {
-  display: none;
-  text-align: center;
+    display: none;
+    text-align: center;
 }
 
 .logo {
-  display: none;
+    display: none;
 }
 
 .search h2 {
-  margin: 10px;
+    margin: 10px;
 }
 
 .inner-container {
-  color: rgb(233, 233, 233);
-  background: rgba(26, 26, 26, 0.5);
-  grid-area: 2 / 2 / span 1 / span 1;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 0px 30px 4px rgba(26, 26, 26, 0.5);
-  padding: 20px;
-  font-family: "Lato", sans-serif;
+    color: rgb(233, 233, 233);
+    background: rgba(26, 26, 26, 0.5);
+    grid-area: 2 / 2 / span 1 / span 1;
+    border-radius: 15px;
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 30px 4px rgba(26, 26, 26, 0.5);
+    padding: 20px;
+    font-family: "Lato", sans-serif;
 }
 
 .circle-div {
-  position: relative;
-  width: 90px;
-  height: 90px;
-  border: 5px solid rgba(0, 0, 0, 0.2);
-  z-index: 0;
-  border-radius: 50%;
-  /* transform: translate(0, 50%); */
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    border-radius: 50%;
+    /* transform: translate(0, 50%); */
 }
 
 .cog-container {
-  position: absolute;
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  animation: rotate 6s linear infinite reverse;
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    animation: rotate 6s linear infinite reverse;
 }
 
 .cog-inner {
-  transform: translate(0px, -2px) scale(1.05);
+    transform: translate(0px, -2px) scale(1.05);
 }
 
 #cog1 {
-  position: absolute;
-  left: 25%;
-  top: 25%;
-  animation: rotate 1s linear infinite;
-  animation-direction: reverse;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    animation: rotate 1s linear infinite;
+    animation-direction: reverse;
 }
 
 #cog2 {
-  position: absolute;
-  left: 12%;
-  top: 13%;
-  animation: rotate 0.5s linear infinite;
-  animation-direction: normal;
+    position: absolute;
+    left: 12%;
+    top: 13%;
+    animation: rotate 0.5s linear infinite;
+    animation-direction: normal;
 }
 
 @keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .circle-svg {
-  position: relative;
-  stroke-linecap: round;
-  transform: rotate(0);
-  stroke-dasharray: 299;
-  stroke-dashoffset: 299;
-  animation: counter 3s linear infinite, rotator 4s linear infinite;
-  z-index: 10;
+    position: relative;
+    stroke-linecap: round;
+    transform: rotate(0);
+    stroke-dasharray: 299;
+    stroke-dashoffset: 299;
+    animation: counter 3s linear infinite, rotator 4s linear infinite;
+    z-index: 10;
 }
 
 @keyframes rotator {
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes counter {
-  0% {
-    stroke-dashoffset: 299;
-  }
+    0% {
+        stroke-dashoffset: 299;
+    }
 
-  100% {
-    stroke-dashoffset: -299;
-  }
+    100% {
+        stroke-dashoffset: -299;
+    }
 }
 
 .svg-container {
-  width: 100px;
-  height: 100px;
-  transform: translate(0, -100%);
+    width: 100px;
+    height: 100px;
+    transform: translate(0, -100%);
 }
 
 .center {
-  max-height: 100px;
-  margin: 10px;
+    max-height: 100px;
+    margin: 10px;
 }
 
-.loading {
-  display: none;
-  font-size: 2em;
-  text-align: center;
-  padding: 10px;
-  font-family: "Reenie Beanie", cursive;
-  transform: scale(0.1);
-  transition: transform 2s ease-in-out forward;
+ !important .loading {
+    display: none;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    font-family: "Reenie Beanie", cursive;
+    transform: scale(0.1);
+    transition: transform 2s ease-in-out forward;
 }
 
 #submit-button {
-  font-size: 1.5em;
-  border-radius: 5px;
-  margin: 0px 10px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin: 0px 10px;
 }
 
 .result {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .button {
-  width: 100px;
-  height: 50px;
-  background: rgb(82, 82, 82);
-  color: white;
-  font-size: 1.3em;
-  border: 1px solid white;
-  border-radius: 10px;
-  margin: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.425);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 100px;
+    height: 50px;
+    background: rgb(82, 82, 82);
+    color: white;
+    font-size: 1.3em;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.425);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .input-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .button:hover {
-  transform: scale(1.03);
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.35);
+    transform: scale(1.03);
+     !important box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.35);
 }
 
 .button:active {
-  transform: scale(0.97);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    transform: scale(0.97);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 #input-text {
-  border-radius: 10px;
-  font-size: 1.5em;
-  margin: 10px 0px;
-  padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin: 10px 0px;
+    padding: 3px 10px;
 }
 
 .show {
-  display: inline;
-  transform: scale(1);
+    display: inline;
+    transform: scale(1);
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f5f5f5;
+    margin: -20px 0px;
+}
+
+#weather-icon svg {
+    fill: currentColor;
+    color: #f5f5f5;
+}
+
+#weather-icon {
+    margin-bottom: -65px;
+    width: 250px;
+}
+
+.temperature {
+    font-size: 5em;
+    display: flex;
+    align-items: center;
+    margin-left: 5px
+}
+
+.celcius {
+    margin: -35px;
+    align-self: center;
+    transform: scale(0.8);
 }

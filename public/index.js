@@ -9,6 +9,8 @@ const result = document.getElementById("result");
 const placename = document.getElementById("placename");
 const summary = document.getElementById("summary");
 const author = document.getElementById("author-name");
+const weatherIcon = document.getElementById("weather-icon");
+const temperature = document.getElementById("temperature")
 
 const getWindowSize = () => {
     const doc = document,
@@ -58,6 +60,8 @@ let picPreload = submitButton.addEventListener("click", e => {
                     summary.innerText = data.forecast.summary;
                     author.innerText = data.img.authorName
                     author.href = data.img.authorURL
+                    weatherIcon.src = `./img/icons/${data.forecast.icon}.svg`
+                    temperature.innerText = Math.round(data.forecast.temp)
                 };
             });
         });
