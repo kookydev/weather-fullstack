@@ -155,7 +155,7 @@ or partly-cloudy-night */
     margin: 10px;
 }
 
- !important .loading {
+.loading {
     display: none;
     font-size: 2em;
     text-align: center;
@@ -204,7 +204,7 @@ or partly-cloudy-night */
 
 .button:hover {
     transform: scale(1.03);
-     !important box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.35);
 }
 
 .button:active {
