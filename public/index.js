@@ -40,14 +40,12 @@ let picPreload = submitButton.addEventListener("click", e => {
         search.classList = "search";
 
         fetch(
-            `/weather?address=${inputText.value}&w=${winSize.width}&h=${
-        winSize.height
-      }&orientation=${orientation}`
+            `/weather?address=${inputText.value}&w=${winSize.width}&h=${winSize.height}&orientation=${orientation}`
         ).then(response => {
             response.json().then(data => {
                 console.log(data);
 
-                //preload the background image before displaying
+                //preload the background image before displaying the results
                 var url = data.img.imgURL;
                 var img = new Image();
                 img.src = url;

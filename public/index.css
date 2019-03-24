@@ -230,6 +230,7 @@ or partly-cloudy-night */
     align-items: center;
     color: #f5f5f5;
     margin: -20px 0px;
+    transform: scale(0.8);
 }
 
 #weather-icon svg {
@@ -253,4 +254,12 @@ or partly-cloudy-night */
     margin: -35px;
     align-self: center;
     transform: scale(0.8);
+}
+
+#placename {
+    max-width: 90vw;
+}
+
+.result {
+    max-width: 95vw;
 }
